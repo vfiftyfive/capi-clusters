@@ -7,3 +7,6 @@ gcpImage: cluster-api-ubuntu-2004-v1-24-11-1679483514
 controlPlaneReplicas: 1
 workerReplicas: 1
 kubernetesVersion: 1.24.11
+addons:
+  nginxIngressChart: enabled
+  

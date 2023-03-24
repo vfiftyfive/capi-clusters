@@ -3,6 +3,12 @@ kind: Cluster
 metadata:
   name: {{ .Values.clusterName }}
   namespace: default
+  {{- if .Values.addons }}
+  labels:
+    {{- range $key, $value := .Values.addons }}
+    {{ $key }}: {{ $value }}
+    {{- end }}
+  {{- end }}
 spec:
   clusterNetwork:
     pods:
