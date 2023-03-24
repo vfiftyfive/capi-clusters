@@ -9,7 +9,6 @@ spec:
       apiServer:
         extraArgs:
           cloud-provider: gce
-        timeoutForControlPlane: 20m
       controllerManager:
         extraArgs:
           allocate-node-cidrs: "false"
@@ -30,4 +29,4 @@ spec:
       kind: GCPMachineTemplate
       name: {{ .Values.clusterName }}-control-plane
   replicas: {{ .Values.controlPlaneReplicas }}
-  version: {{ .Values.kubernetesVersion}}
+  version: v{{ .Values.kubernetesVersion}}

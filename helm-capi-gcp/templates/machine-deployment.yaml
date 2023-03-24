@@ -20,4 +20,4 @@ spec:
         apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
         kind: GCPMachineTemplate
         name: {{ .Values.clusterName }}-md-0
-      version: {{ .Values.kubernetesVersion }}
+      version: v{{ .Values.kubernetesVersion }}
