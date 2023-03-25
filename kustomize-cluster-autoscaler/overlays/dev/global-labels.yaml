@@ -1,0 +1,6 @@
+kind: LabelTransformer
+metadata:
+  name: global-labels
+fieldSpecs:
+- path: metadata/labels
+  create: true

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cluster-autoscaler
+  namespace: kube-system
+spec:
+  selector:
+      matchLabels:
+        app: cluster-autoscaler
+  template:
+    spec:
+      containers:
+        - name: cluster-autoscaler
+          args:
+          - --kubeconfig=/mnt/dev-capi-nic.kubeconfig
+          - --clusterapi-cloud-config-authoritative
+          - --cloud-provider=clusterapi
+          - --node-group-auto-discovery=clusterapi:clusterName=dev-capi-nic

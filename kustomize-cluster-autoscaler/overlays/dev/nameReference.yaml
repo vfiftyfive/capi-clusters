@@ -1,0 +1,9 @@
+nameReference:
+- kind: Deployment
+  fieldSpecs:
+  - path: metadata/labels/app
+  - path: spec/selector/matchLabels/app
+  - path: spec/template/metadata/labels/app
+
+
+
