@@ -7,3 +7,5 @@ configurations:
 - nameReference.yaml
 patches:
 - path: deployment.yaml
+generators:
+- secret-generator.yaml

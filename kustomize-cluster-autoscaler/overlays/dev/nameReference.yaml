@@ -4,6 +4,8 @@ nameReference:
   - path: metadata/labels/app
   - path: spec/selector/matchLabels/app
   - path: spec/template/metadata/labels/app
-
+- kind: configMap
+  fieldSpecs:
+  - path: spec/volumes/configMap/name
 
 
