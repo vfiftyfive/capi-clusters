@@ -5,5 +5,5 @@ resources:
 - cluster-role-binding-workload.yaml
 - cluster-role-management.yaml
 - cluster-role-workload.yaml
-- Deployment.yaml
+- deployment.yaml
 - service-account.yaml
