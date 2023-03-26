@@ -4,8 +4,8 @@ metadata:
   name: {{ .Values.clusterName }}-md-0
   namespace: default
   annotations:
-    cluster.x-k8s.io/cluster-api-autoscaler-node-group-max-size: {{ .Values.maxWorkerReplicas }}
-    cluster.x-k8s.io/cluster-api-autoscaler-node-group-min-size: {{ .Values.workerReplicas }}
+    cluster.x-k8s.io/cluster-api-autoscaler-node-group-max-size: "{{ .Values.maxWorkerReplicas }}"
+    cluster.x-k8s.io/cluster-api-autoscaler-node-group-min-size: "{{ .Values.workerReplicas }}"
 spec:
   clusterName: {{ .Values.clusterName}}
   replicas: {{ .Values.workerReplicas }}
