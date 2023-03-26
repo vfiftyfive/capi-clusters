@@ -12,10 +12,10 @@ spec:
       containers:
         - name: cluster-autoscaler
           args:
-          - --kubeconfig=/mnt/dev-capi-nic.kubeconfig
+          - --kubeconfig=/mnt/capi-dev.kubeconfig
           - --clusterapi-cloud-config-authoritative
           - --cloud-provider=clusterapi
-          - --node-group-auto-discovery=clusterapi:clusterName=dev-capi-nic
+          - --node-group-auto-discovery=clusterapi:clusterName=capi-dev
       volumes:
       - name: kubeconfig-vol
         configMap: 
