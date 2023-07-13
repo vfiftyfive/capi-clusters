@@ -1,8 +1,8 @@
 clusterName: capi-dev
 gcpProject: nic-dev-356208
 gcpRegion: us-central1
-gcpControlPlaneInstanceType: n1-standard-2
-gcpWorkerInstanceType: n1-standard-2
+gcpControlPlaneInstanceType: e2-standard-2
+gcpWorkerInstanceType: e2-standard-2
 gcpImage: cluster-api-ubuntu-2004-v1-24-11-1679483514
 controlPlaneReplicas: 1
 workerReplicas: 1
