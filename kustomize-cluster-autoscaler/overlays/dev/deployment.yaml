@@ -11,7 +11,7 @@ spec:
       containers:
         - name: cluster-autoscaler
           args:
-          - --kubeconfig=/mnt/capi-dev.kubeconfig
+          - --kubeconfig=/mnt/capi-dev-kubeconfig
           - --clusterapi-cloud-config-authoritative
           - --cloud-provider=clusterapi
           - --node-group-auto-discovery=clusterapi:clusterName=capi-dev
