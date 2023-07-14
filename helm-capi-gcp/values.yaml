@@ -10,4 +10,5 @@ maxWorkerReplicas: 10
 kubernetesVersion: 1.24.11
 addons:
   nginxIngressChart: enabled
+  calicoCNIChart: enabled
 
