@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cluster-autoscaler
-  namespace: kube-system
+  namespace: default
 spec:
   selector:
       matchLabels:
@@ -18,9 +18,5 @@ spec:
           - --node-group-auto-discovery=clusterapi:clusterName=capi-dev
       volumes:
       - name: kubeconfig-vol
-        secret:
-          secretName: capi-dev-kubeconfig
-          items:
-          - key: value
-            path: capi-dev.kubeconfig
-
+        configMap: 
+          name: kubeconfig

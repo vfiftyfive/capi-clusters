@@ -1,5 +1,5 @@
 clusterName: capi-dev
-clusterNamespace: kube-system
+clusterNamespace: default
 gcpProject: nic-dev-356208
 gcpRegion: us-central1
 gcpControlPlaneInstanceType: e2-standard-2
