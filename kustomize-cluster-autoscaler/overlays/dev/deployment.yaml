@@ -18,5 +18,9 @@ spec:
           - --node-group-auto-discovery=clusterapi:clusterName=capi-dev
       volumes:
       - name: kubeconfig-vol
-        configMap: 
-          name: kubeconfig
+        secret:
+          secretName: capi-dev-kubeconfig
+          items:
+          - key: value
+            path: capi-dev.kubeconfig
+
