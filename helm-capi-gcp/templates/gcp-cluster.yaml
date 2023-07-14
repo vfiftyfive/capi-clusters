@@ -2,7 +2,7 @@ apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
 kind: GCPCluster
 metadata:
   name: {{ .Values.clusterName }}
-  namespace: default
+  namespace: {{ .Values.clusterNamespace | default "default"}}
 spec:
   network:
     name: default

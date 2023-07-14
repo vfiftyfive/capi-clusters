@@ -2,7 +2,7 @@ apiVersion: controlplane.cluster.x-k8s.io/v1beta1
 kind: KubeadmControlPlane
 metadata:
   name: {{ .Values.clusterName }}-control-plane
-  namespace: default
+  namespace: {{ .Values.clusterNamespace | default "default"}}
 spec:
   kubeadmConfigSpec:
     clusterConfiguration:
