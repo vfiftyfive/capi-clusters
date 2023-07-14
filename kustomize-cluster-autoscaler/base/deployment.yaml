@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cluster-autoscaler
-  namespace: default
+  namespace: kube-system
   labels:
     app: cluster-autoscaler
 spec:
@@ -35,4 +35,5 @@ spec:
         key: node-role.kubernetes.io/master
       volumes:
       - name: kubeconfig-vol
-        
+        configMap: 
+          name: kubeconfig
