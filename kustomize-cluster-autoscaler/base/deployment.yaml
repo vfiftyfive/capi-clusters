@@ -35,5 +35,5 @@ spec:
         key: node-role.kubernetes.io/master
       volumes:
       - name: kubeconfig-vol
-        secret: 
-          secretName: capi-dev-kubeconfig
+        configMap: 
+          name: kubeconfig
