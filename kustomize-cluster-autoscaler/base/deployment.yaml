@@ -33,4 +33,7 @@ spec:
       tolerations:
       - effect: NoSchedule
         key: node-role.kubernetes.io/master
-      
+      volumes:
+      - name: kubeconfig-vol
+        secret: 
+          secretName: capi-dev-kubeconfig
